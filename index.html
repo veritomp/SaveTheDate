@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Invitación de boda de Xavi & Vero — 20 de marzo de 2027">
+  <title>Xavi & Vero · 20.03.2027</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --olive: #566044;
+      --olive-dark: #3d4731;
+      --gold: #b99a5a;
+      --gold-light: #d8c18c;
+      --cream: #f7f4ec;
+      --ink: #283026;
+      --white: #fffdf8;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: Montserrat, sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+    }
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 15% 15%, rgba(185,154,90,.18), transparent 28%),
+        radial-gradient(circle at 85% 85%, rgba(86,96,68,.16), transparent 30%),
+        var(--cream);
+    }
+    .hero::before, .hero::after {
+      content: "";
+      position: absolute;
+      border: 1px solid rgba(185,154,90,.55);
+      border-radius: 50%;
+      width: 48vw; height: 48vw;
+      max-width: 650px; max-height: 650px;
+    }
+    .hero::before { transform: translate(-32%, -28%); }
+    .hero::after { transform: translate(32%, 28%); }
+    .hero-content { position: relative; z-index: 1; padding: 32px 20px; }
+    .eyebrow {
+      letter-spacing: .35em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-size: .72rem;
+      margin-bottom: 18px;
+    }
+    h1 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(4.8rem, 14vw, 10rem);
+      line-height: .8;
+      font-weight: 500;
+      color: var(--olive-dark);
+      margin: 0;
+    }
+    .amp { color: var(--gold); font-weight: 400; }
+    .date {
+      margin: 34px 0 8px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      color: var(--olive);
+      letter-spacing: .08em;
+    }
+    .place { color: #6d7564; font-size: .85rem; letter-spacing: .12em; text-transform: uppercase; }
+    .scroll { margin-top: 50px; color: var(--gold); font-size: .7rem; letter-spacing: .25em; text-transform: uppercase; }
+    section { padding: 90px 20px; }
+    .container { max-width: 980px; margin: auto; }
+    .section-title {
+      font-family: "Cormorant Garamond", serif;
+      color: var(--olive-dark);
+      text-align: center;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 500;
+      margin: 0 0 18px;
+    }
+    .intro { text-align: center; max-width: 680px; margin: 0 auto 50px; color: #62685c; }
+    .countdown {
+      background: var(--olive-dark);
+      color: var(--white);
+      border-top: 1px solid var(--gold);
+      border-bottom: 1px solid var(--gold);
+    }
+    .timer { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; max-width: 760px; margin: 38px auto 0; text-align: center; }
+    .unit { padding: 20px 8px; }
+    .number { display:block; font-family:"Cormorant Garamond",serif; color:var(--gold-light); font-size: clamp(2.7rem,7vw,4.5rem); line-height:1; }
+    .label { display:block; margin-top:8px; text-transform:uppercase; letter-spacing:.18em; font-size:.62rem; color:#d8d9d1; }
+    .photo-wrap { max-width: 850px; margin: 40px auto 0; }
+    .photo {
+      aspect-ratio: 4/3;
+      border: 1px solid var(--gold);
+      background: #e8e4d8;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+    .photo img { width:100%; height:100%; object-fit:cover; display:block; }
+    .photo-placeholder { text-align:center; padding:25px; color:#737a6c; }
+    .photo-placeholder strong { display:block; font-family:"Cormorant Garamond",serif; font-size:2rem; color:var(--olive); font-weight:500; }
+    .details { background: #eeeade; }
+    .detail-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; margin-top:42px; }
+    .card {
+      background:var(--white);
+      border:1px solid rgba(185,154,90,.55);
+      padding:42px 28px;
+      text-align:center;
+    }
+    .icon { color:var(--gold); font-size:1.6rem; margin-bottom:10px; }
+    .card h3 { font-family:"Cormorant Garamond",serif; font-size:2rem; color:var(--olive-dark); margin:0 0 10px; font-weight:500; }
+    .card p { margin:0 0 22px; color:#666c61; }
+    .map-link {
+      display:inline-block; color:var(--olive-dark); text-decoration:none; border-bottom:1px solid var(--gold);
+      padding-bottom:3px; letter-spacing:.1em; text-transform:uppercase; font-size:.7rem;
+    }
+    footer { text-align:center; padding:70px 20px; background:var(--olive-dark); color:#e9e8df; }
+    footer .names { font-family:"Cormorant Garamond",serif; font-size:3rem; color:var(--gold-light); }
+    footer p { font-size:.75rem; letter-spacing:.16em; text-transform:uppercase; }
+    .music-button {
+      position:fixed; right:20px; bottom:20px; z-index:10;
+      width:48px; height:48px; border:1px solid var(--gold);
+      border-radius:50%; background:var(--olive-dark); color:var(--gold-light);
+      cursor:pointer; font-size:1rem; display:none;
+    }
+    /* Mobile-first refinements: the invitation is designed primarily for phones. */
+    @media (max-width: 650px) {
+      body { overflow-x: hidden; }
+      .hero {
+        min-height: 100svh;
+        padding: 24px 14px;
+      }
+      .hero::before, .hero::after {
+        width: 78vw;
+        height: 78vw;
+      }
+      .hero-content { padding: 20px 8px; }
+      .eyebrow { font-size: .62rem; letter-spacing: .25em; margin-bottom: 22px; }
+      h1 {
+        font-size: clamp(4rem, 22vw, 6.5rem);
+        line-height: .78;
+        letter-spacing: -.03em;
+      }
+      .date {
+        margin-top: 30px;
+        font-size: 1.45rem;
+        letter-spacing: .04em;
+      }
+      .place { font-size: .68rem; letter-spacing: .1em; }
+      .scroll { margin-top: 44px; font-size: .58rem; }
+
+      section { padding: 64px 18px; }
+      .section-title {
+        font-size: clamp(2.5rem, 12vw, 3.5rem);
+        line-height: .95;
+      }
+      .intro { font-size: .86rem; line-height: 1.85; margin-bottom: 36px; }
+
+      .countdown { padding: 58px 14px; }
+      .countdown .section-title { margin-bottom: 26px; }
+      .timer {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6px;
+        margin-top: 0;
+      }
+      .unit {
+        padding: 17px 5px;
+        border: 1px solid rgba(216,193,140,.2);
+      }
+      .number { font-size: clamp(2.2rem, 12vw, 3.7rem); }
+      .label { font-size: .56rem; letter-spacing: .14em; }
+
+      .photo-wrap { margin-top: 30px; }
+      .photo { aspect-ratio: 3/4; }
+      .photo-placeholder { padding: 20px; font-size: .78rem; }
+      .photo-placeholder strong { font-size: 1.8rem; }
+
+      .details { padding-top: 64px; }
+      .detail-grid { grid-template-columns: 1fr; gap: 14px; margin-top: 32px; }
+      .card { padding: 32px 22px; }
+      .card h3 { font-size: 1.8rem; line-height: 1.1; }
+      .card p { font-size: .82rem; }
+      .map-link {
+        padding: 10px 2px;
+        font-size: .66rem;
+      }
+
+      footer { padding: 58px 20px; }
+      footer .names { font-size: 2.7rem; }
+      footer p { font-size: .62rem; }
+
+      .music-button {
+        right: 16px;
+        bottom: max(16px, env(safe-area-inset-bottom));
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    @media (min-width: 651px) {
+      .hero-content { transform: translateY(-2vh); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <!--
+    CONFIGURACIÓN
+    1) Para añadir música: sube un archivo MP3 a la carpeta del proyecto
+       y cambia MUSIC_FILE por su nombre, por ejemplo "musica.mp3".
+    2) Para añadir vuestra foto: sustituye "foto-pareja.jpg" por el nombre
+       de vuestro archivo y déjalo en la misma carpeta.
+  -->
+  <script>
+    const CONFIG = {
+      weddingDate: "2027-03-20T12:00:00+01:00",
+      musicFile: "", // Ejemplo: "musica.mp3"
+      photoFile: ""  // Ejemplo: "foto-pareja.jpg"
+    };
+  </script>
+
+  <header class="hero">
+    <div class="hero-content">
+      <div class="eyebrow">Nuestra boda</div>
+      <h1>Xavi <span class="amp">&amp;</span> Vero</h1>
+      <div class="date">20 · marzo · 2027</div>
+      <div class="place">Masia Can Mauri</div>
+      <div class="scroll">Con mucha ilusión · ↓</div>
+    </div>
+  </header>
+
+  <section class="countdown" aria-label="Cuenta atrás">
+    <div class="container">
+      <h2 class="section-title" style="color:#f7f4ec">Ya queda menos</h2>
+      <div class="timer">
+        <div class="unit"><span class="number" id="days">—</span><span class="label">Días</span></div>
+        <div class="unit"><span class="number" id="hours">—</span><span class="label">Horas</span></div>
+        <div class="unit"><span class="number" id="minutes">—</span><span class="label">Minutos</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">Un día para recordar</h2>
+      <p class="intro">Queremos compartir con vosotros uno de los días más especiales de nuestras vidas. Nos encantará que nos acompañéis en este comienzo de nuestra nueva aventura.</p>
+      <div class="photo-wrap">
+        <div class="photo" id="photoBox">
+          <div class="photo-placeholder" id="photoPlaceholder">
+            <strong>Nuestra foto</strong>
+            Añade vuestra foto en <em>CONFIG → photoFile</em>.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="details">
+    <div class="container">
+      <h2 class="section-title">El gran día</h2>
+      <div class="detail-grid">
+        <article class="card">
+          <div class="icon">✦</div>
+          <h3>20 de marzo de 2027</h3>
+          <p>Estamos deseando celebrarlo junto a vosotros.</p>
+        </article>
+        <article class="card">
+          <div class="icon">⌖</div>
+          <h3>Masia Can Mauri</h3>
+          <p>Un lugar especial para un día inolvidable.</p>
+          <a class="map-link" href="https://maps.app.goo.gl/kwwJEgqBhPuKPt5PA" target="_blank" rel="noopener">Cómo llegar</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="names">Xavi &amp; Vero</div>
+    <p>20 · 03 · 2027</p>
+  </footer>
+
+  <audio id="weddingMusic" loop preload="none"></audio>
+  <button class="music-button" id="musicButton" aria-label="Reproducir música">♪</button>
+
+  <script>
+    const target = new Date(CONFIG.weddingDate).getTime();
+    function updateCountdown() {
+      const diff = Math.max(0, target - Date.now());
+      const d = Math.floor(diff / 86400000);
+      const h = Math.floor((diff % 86400000) / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      document.getElementById("days").textContent = d;
+      document.getElementById("hours").textContent = String(h).padStart(2,"0");
+      document.getElementById("minutes").textContent = String(m).padStart(2,"0");
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    if (CONFIG.photoFile) {
+      const img = document.createElement("img");
+      img.src = CONFIG.photoFile;
+      img.alt = "Xavi y Vero";
+      document.getElementById("photoBox").replaceChildren(img);
+    }
+
+    const audio = document.getElementById("weddingMusic");
+    const musicButton = document.getElementById("musicButton");
+    if (CONFIG.musicFile) {
+      audio.src = CONFIG.musicFile;
+      musicButton.style.display = "block";
+      musicButton.addEventListener("click", async () => {
+        if (audio.paused) {
+          await audio.play();
+          musicButton.textContent = "Ⅱ";
+        } else {
+          audio.pause();
+          musicButton.textContent = "♪";
+        }
+      });
+    }
+  </script>
+</body>
+</html>
