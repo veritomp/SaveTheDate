@@ -93,7 +93,15 @@
       border-top: 1px solid var(--gold);
       border-bottom: 1px solid var(--gold);
     }
-    .timer { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; max-width: 760px; margin: 38px auto 0; text-align: center; }
+    .countdown-target {
+      margin: 0 auto 24px;
+      text-align: center;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(1.25rem, 3vw, 1.8rem);
+      color: var(--gold-light);
+      letter-spacing: .02em;
+    }
+    .timer { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; max-width: 560px; margin: 38px auto 0; text-align: center; }
     .unit { padding: 20px 8px; }
     .number { display:block; font-family:"Cormorant Garamond",serif; color:var(--gold-light); font-size: clamp(2.7rem,7vw,4.5rem); line-height:1; }
     .label { display:block; margin-top:8px; text-transform:uppercase; letter-spacing:.18em; font-size:.62rem; color:#d8d9d1; }
@@ -112,6 +120,7 @@
     .photo-placeholder strong { display:block; font-family:"Cormorant Garamond",serif; font-size:2rem; color:var(--olive); font-weight:500; }
     .details { background: #eeeade; }
     .detail-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; margin-top:42px; }
+    .single-card { grid-template-columns:minmax(0, 620px); justify-content:center; }
     .card {
       background:var(--white);
       border:1px solid rgba(185,154,90,.55);
@@ -126,6 +135,7 @@
       padding-bottom:3px; letter-spacing:.1em; text-transform:uppercase; font-size:.7rem;
     }
     footer { text-align:center; padding:70px 20px; background:var(--olive-dark); color:#e9e8df; }
+    .wedding-logo { display:block; width:min(760px, 92vw); height:auto; max-height:260px; object-fit:contain; margin:0 auto; }
     footer .names { font-family:"Cormorant Garamond",serif; font-size:3rem; color:var(--gold-light); }
     footer p { font-size:.75rem; letter-spacing:.16em; text-transform:uppercase; }
     .music-button {
@@ -188,6 +198,7 @@
 
       .details { padding-top: 64px; }
       .detail-grid { grid-template-columns: 1fr; gap: 14px; margin-top: 32px; }
+      .single-card { grid-template-columns: 1fr; }
       .card { padding: 32px 22px; }
       .card h3 { font-size: 1.8rem; line-height: 1.1; }
       .card p { font-size: .82rem; }
@@ -196,9 +207,8 @@
         font-size: .66rem;
       }
 
-      footer { padding: 58px 20px; }
-      footer .names { font-size: 2.7rem; }
-      footer p { font-size: .62rem; }
+      footer { padding: 42px 14px; }
+      .wedding-logo { width: min(94vw, 560px); max-height: 210px; }
 
       .music-button {
         right: 16px;
@@ -247,6 +257,7 @@
   <section class="countdown" aria-label="Cuenta atrás">
     <div class="container">
       <h2 class="section-title" style="color:#f7f4ec">Ya queda menos</h2>
+      <p class="countdown-target">Hasta el 20 de marzo de 2027 a las 12:00</p>
       <div class="timer">
         <div class="unit"><span class="number" id="days">—</span><span class="label">Días</span></div>
         <div class="unit"><span class="number" id="hours">—</span><span class="label">Horas</span></div>
@@ -272,26 +283,20 @@
 
   <section class="details">
     <div class="container">
-      <h2 class="section-title">El gran día</h2>
-      <div class="detail-grid">
-        <article class="card">
-          <div class="icon">✦</div>
-          <h3>20 de marzo de 2027</h3>
-          <p>Estamos deseando celebrarlo junto a vosotros.</p>
-        </article>
+      <h2 class="section-title">Cómo llegar</h2>
+      <div class="detail-grid single-card">
         <article class="card">
           <div class="icon">⌖</div>
           <h3>Masia Can Mauri</h3>
-          <p>Un lugar especial para un día inolvidable.</p>
-          <a class="map-link" href="https://maps.app.goo.gl/kwwJEgqBhPuKPt5PA" target="_blank" rel="noopener">Cómo llegar</a>
+          <p>El lugar donde celebraremos nuestro día.</p>
+          <a class="map-link" href="https://maps.app.goo.gl/kwwJEgqBhPuKPt5PA" target="_blank" rel="noopener">Ver en Google Maps</a>
         </article>
       </div>
     </div>
   </section>
 
   <footer>
-    <div class="names">Xavi &amp; Vero</div>
-    <p>20 · 03 · 2027</p>
+    <img class="wedding-logo" src="logo-boda.png" alt="Xavi & Vero · 20 de marzo de 2027">
   </footer>
 
   <audio id="weddingMusic" loop preload="none"></audio>
