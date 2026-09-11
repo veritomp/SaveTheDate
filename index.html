@@ -17,7 +17,6 @@
       --cream: #f7f4ec;
       --ink: #283026;
       --white: #fffdf8;
-      --red: ff0000;
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -77,8 +76,8 @@
     }
     .place { color: #6d7564; font-size: .85rem; letter-spacing: .12em; text-transform: uppercase; }
     .scroll { margin-top: 50px; color: var(--gold); font-size: .7rem; letter-spacing: .25em; text-transform: uppercase; }
-    section { padding: 45px 2px; }
-    .container { max-width: 98px; margin: auto; }
+    section { padding: 90px 20px; }
+    .container { max-width: 980px; margin: auto; }
     .section-title {
       font-family: "Cormorant Garamond", serif;
       color: var(--olive-dark);
@@ -87,7 +86,7 @@
       font-weight: 500;
       margin: 0 0 18px;
     }
-    .intro { text-align: center; max-width: 68px; margin: 0 auto 50px; color: #62685c; }
+    .intro { text-align: center; max-width: 680px; margin: 0 auto 50px; color: #62685c; }
     .countdown {
       background: var(--olive-dark);
       color: var(--white);
@@ -139,13 +138,12 @@
     .wedding-logo { display:block; width:min(760px, 92vw); height:auto; max-height:260px; object-fit:contain; margin:0 auto; }
     footer .names { font-family:"Cormorant Garamond",serif; font-size:3rem; color:var(--gold-light); }
     footer p { font-size:.75rem; letter-spacing:.16em; text-transform:uppercase; }
-/*    .music-button {
+    .music-button {
       position:fixed; right:20px; bottom:20px; z-index:10;
       width:48px; height:48px; border:1px solid var(--gold);
       border-radius:50%; background:var(--olive-dark); color:var(--gold-light);
       cursor:pointer; font-size:1rem; display:none;
     }
-    */
     /* Mobile-first refinements: the invitation is designed primarily for phones. */
     @media (max-width: 650px) {
       body { overflow-x: hidden; }
@@ -298,7 +296,7 @@
   </section>
 
   <footer>
-    <img class="wedding-logo" src="logo-boda.png">
+    <img class="wedding-logo" src="logo-boda.png" alt="Xavi & Vero · 20 de marzo de 2027">
   </footer>
 
   <audio id="weddingMusic" loop preload="none"></audio>
