@@ -39,7 +39,7 @@
       line-height: 1.7;
     }
     .hero {
-      min-height: 100vh;
+      min-height: 90vh; /*antes 100*/
       display: grid;
       place-items: center;
       text-align: center;
