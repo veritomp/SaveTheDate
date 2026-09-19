@@ -101,8 +101,8 @@
 
       background: var(--olive-dark);
       color: var(--white);
-      border-top: 1px solid var(--gold);
-      border-bottom: 1px solid var(--gold);
+      --border-top: 1px solid var(--gold);
+      --border-bottom: 1px solid var(--gold);
     }
     .countdown-target {
       margin: 0 auto 24px;
