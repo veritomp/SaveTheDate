@@ -144,6 +144,7 @@
     .map-link {
       display:inline-block; color:var(--olive-dark); text-decoration:none; border-bottom:1px solid var(--gold);
       padding-bottom:3px; letter-spacing:.1em; text-transform:uppercase; font-size:.7rem;
+      text-align:center;
     }
     footer { text-align:center; padding:70px 20px; background:var(--white); color:#fffdf8; }
     .wedding-logo { display:block; width:min(760px, 92vw); height:auto; max-height:260px; object-fit:contain; margin:0 auto; }
