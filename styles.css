@@ -169,7 +169,7 @@
       .countdown { padding-top: 30px; padding-bottom: 30px; }
       body { overflow-x: hidden; }
       .hero {
-        min-height: 100svh;
+        min-height: 90svh; --Antes 10
         padding: 24px 14px;
       }
       .hero::before, .hero::after {
